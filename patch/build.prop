@@ -18,5 +18,31 @@ persist.hwc.mdpcomp.enable=true
 persist.hwc.ptor.enable=true
 debug.sf.gpu_comp_tiling=1
 debug.performance.tuning=1
+# Increase user interface FPS
+sys.use_fifo_ui=1
+debug.sf.latch_unsignaled=1
+debug.sf.disable_backpressure=1
+
+# GPU Tune-up
+debug.composition.type=gpu
+debug.composition.type=c2d
+debug.egl.hw=1
+debug.egl.profiler=1
+debug.enabletr=true
+debug.overlayui.enable=1
+debug.performance.tuning=1
+dev.pm.dyn_samplingrate=1
+hw3d.force=1
+hwui.disable_vsync=true
+hwui.render_dirty_regions=false
+persist.sys.composition.type=c2d
+persist.sys.composition.type=gpu
+persist.sys.ui.hw=1
+ro.config.enable.hw_accel=true
+ro.product.gpu.driver=1
+ro.fb.mode=1
+ro.vold.umsdirtyratio=50
+ro.sf.compbypass.enable=0
+video.accelerate.hw=1
 
 ##END_ACRUX
