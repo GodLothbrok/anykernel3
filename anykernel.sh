@@ -14,7 +14,7 @@ device.name2=MI8Lite
 device.name3=mi8lite
 device.name4=8lite
 device.name5=
-supported.versions=9
+supported.versions=9,9.0
 '; } # end properties
 
 # shell variables
