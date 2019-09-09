@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Acrux kernel by nysascape
+kernel.string=Alcor kernel by nysascape
 do.devicecheck=1
 do.modules=0
 do.cleanup=1
@@ -31,17 +31,6 @@ ramdisk_compression=auto;
 chmod -R 750 $ramdisk/*;
 chown -R root:root $ramdisk/*;
 
-## begin vendor changes
-mount -o rw,remount -t auto /vendor >/dev/null;
-
-# Make a backup of init.target.rc
-restore_file /vendor/etc/init/hw/init.target.rc;
-backup_file /vendor/etc/init/hw/init.target.rc;
-
-# Make a backup of vendor build.prop
-restore_file /vendor/build.prop;
-backup_file /vendor/build.prop;
-
 ## AnyKernel install
 dump_boot;
 
@@ -52,11 +41,6 @@ if [ -d $ramdisk/.backup ]; then
 else
   patch_cmdline "skip_override" "";
 fi;
-
-# Remove recovery service so that TWRP isn't overwritten
-remove_section init.rc "service flash_recovery" ""
-
-# end ramdisk changes
 
 write_boot;
 ## end install
