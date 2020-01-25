@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Alcor (HMP) kernel by nysascape
+kernel.string=Icecream kernel
 do.devicecheck=1
 do.modules=0
 do.cleanup=1
